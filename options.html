@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>silentproxy</title>
+<style>
+  span, input, select, button {margin: 10px 10px 10px 0; font-size: 20px}
+  label {margin-right: 10px}
+</style>
+</head>
+
+<body>
+<label>
+  <h2>Select the condition under which a proxy will be enabled</h2>
+  <select id="cond_options">
+    <option value="page_contains">Page contains</option>
+    <option value="el_contains">Element contains</option>
+  </select>
+  <button id="add_cond_option">Select</button>
+</label>
+
+<h2>Current conditions</h2>
+<form id="form">
+  <div></div>
+  <input type="submit" value="Save"/>
+</form>
+
+<script src="lib/browser-polyfill.min.js"></script>
+<script src="lib.js"></script>
+<script src="webext_lib.js"></script>
+<script src="api.js"></script>
+<script src="options.js"></script>
+</body>
+</html>

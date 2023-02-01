@@ -1,0 +1,21 @@
+{
+  "manifest_version" : 3,
+  "version" : "0.0.1",
+  "name" : "silentproxy",
+  "description" : "Automatically enables browser proxy according to custom rules",
+
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": [
+      "lib/browser-polyfill.min.js",
+      "webext_lib.js",
+      "api.js",
+      "content.js"
+    ]
+  }],
+
+  "background": {"service_worker": "bg.js"},
+  "options_page": "options.html",
+  "permissions": ["webRequest", "proxy", "storage"],
+  "host_permissions": ["<all_urls>"]
+}
