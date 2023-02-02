@@ -1,6 +1,17 @@
 const sleep = ms =>
   new Promise(resolve => setTimeout(resolve, ms))
 
+const promise_to_bool = async promise => {
+  try {
+    const r = await promise
+    console.debug(`Promise success: "${r}"`)
+    return true
+  } catch (e) {
+    console.debug(`Promise failed: ${e.stack}`)
+    return false
+  }
+}
+
 const append_element = (container, tag_name, attributes = {}) => {
   const el = document.createElement(tag_name)
 

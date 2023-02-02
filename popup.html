@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>silentproxy</title>
+<style>
+  button {margin: 15px; font-size: 15px}
+</style>
+</head>
+
+<body>
+<label>
+  <button id="refresh_proxy">Refresh proxy</button>
+  Use if the target page doesn't refresh, but another pages are loading
+</label>
+<label>
+  <button id="clear_proxy_cache">Clear proxy cache</button>
+  Use if the button above doesn't help
+</label>
+<label>
+  <button id="clear_proxy_settings">Clear proxy settings</button>
+  Use if you can't load any pages
+</label>
+
+<script src="lib/browser-polyfill.min.js"></script>
+<script src="lib/txml.min.js"></script>
+<script src="lib.js"></script>
+<script src="webext_lib.js"></script>
+<script src="api.js"></script>
+<script src="popup.js"></script>
+</body>
+</html>
